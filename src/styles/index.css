@@ -1,0 +1,180 @@
+:root {
+  --gradientOrange: -webkit-linear-gradient(#f2caa6, #bf8514);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+  background: #232931;
+}
+
+button,
+input,
+textarea {
+  display: block;
+  background-color: transparent;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  background: var(--gradientOrange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding-bottom: 17px;
+}
+
+.title::before,
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 5px;
+}
+
+.title::before {
+  width: 50%;
+  background: var(--gradientOrange);
+}
+
+.title::after {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.apple-fortune__title {
+  max-width: 317px;
+  margin-bottom: 20px;
+}
+
+.apple-fortune__inner {
+  display: flex;
+}
+
+.apple-fortune__fields {
+  display: grid;
+  grid-template-columns: repeat(6, 0fr);
+  grid-template-rows: repeat(10, 0fr);
+  gap: 1px;
+  margin-bottom: 7px;
+}
+
+.apple-fortune__field {
+  background: #272d3d;
+  border: 1.5px solid #000000;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apple-fortune__fields--apple {
+  background: #4ea850;
+}
+
+.apple-fortune__fields--stub {
+  background: #aa3035;
+}
+
+.bet-bar {
+  display: grid;
+  justify-content: center;
+  gap: 11px;
+  grid-auto-flow: column;
+  background: #272d3d;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 5px 5px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.bet-item {
+  background: #4ea850;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+}
+
+.bet-bar__input {
+  background: #eee0bd;
+  text-align: center;
+  border-radius: 5px;
+  width: 137px;
+  height: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.bet-bar__input::-webkit-outer-spin-button,
+.bet-bar__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.bet-bar__reset {
+  width: 47px;
+  height: 50px;
+  background: url('/images/svg/reset-icon.svg') 0 0 / cover no-repeat;
+}
